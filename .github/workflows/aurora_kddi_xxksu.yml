@@ -17,7 +17,7 @@ jobs:
       KERNEL_REPO: https://github.com/Sorayukii/stardust_kernel_sony_sdm845
       ANYKERNEL_REPO: https://github.com/Sorayukii/AnyKernel3
       CLANG_URL: https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz
-      KSU_URL: https://raw.githubusercontent.com/sorayukii/backslashxx/master/kernel/setup.sh
+      KSU_URL: https://raw.githubusercontent.com/backslashxx/KernelSU/master/kernel/setup.sh
       KSU_BRANCH: master
 
     steps:
