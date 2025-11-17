@@ -50,10 +50,7 @@ jobs:
     - name: Download and extract Clang toolchain
       run: |
         cd $KERNEL_DIR
-        wget -O clang.tar.gz "$CLANG_URL"
-        mkdir -p clang
-        tar -xf clang.tar.gz -C clang
-        rm -f clang.tar.gz
+        git clone https://gitlab.com/Panchajanya1999/azure-clang.git --depth=1 clang
         echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV
         
     - name: Set up SukiSU
@@ -62,7 +59,7 @@ jobs:
         curl -LSs "$KSU_URL" | bash -s $KSU_BRANCH
         cd KernelSU
         git fetch https://github.com/Sorayukii/SukiSU-Ultra susfs-main
-        git reset --hard 07321d2718611201c60d0a723a7077500176461c
+        git reset --hard 1c5cfa4ddf5116be299d57ce06bdca4c0a0dd82f
 
     - name: Generate defconfig
       run: |
