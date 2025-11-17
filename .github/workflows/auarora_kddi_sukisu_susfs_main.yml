@@ -56,10 +56,12 @@ jobs:
         rm -f clang.tar.gz
         echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV
         
-    - name: Set up XXKSU
+    - name: Set up SukiSU
       run: |
         cd $KERNEL_DIR
         curl -LSs "$KSU_URL" | bash -s $KSU_BRANCH
+        git fetch https://github.com/Sorayukii/SukiSU-Ultra susfs-main
+        git cherry-pick 72f16747d1d275c7db6a60c927c7c3648629f6d7
 
     - name: Generate defconfig
       run: |
