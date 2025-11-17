@@ -59,7 +59,7 @@ jobs:
         curl -LSs "$KSU_URL" | bash -s $KSU_BRANCH
         cd KernelSU
         git fetch https://github.com/Sorayukii/SukiSU-Ultra susfs-main
-        git reset --hard f3f02fe5e3e42eaf1911d5ee276e3af29ab5d99a
+        git reset --hard 003b05a368a33f200406f410c1b61776fbbd2fd5
 
     - name: Generate defconfig
       run: |
