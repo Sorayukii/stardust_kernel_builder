@@ -12,7 +12,7 @@ jobs:
       CODENAME: aurora_kddi
       BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
       CHAT_ID: ${{ secrets.CHAT_ID }}
-      KERNEL_VER: Stardust-v1.7rc1
+      KERNEL_VER: Stardust-v1.7rc5
       KERNEL_BRANCH: xxksu
       KERNEL_REPO: https://github.com/Sorayukii/stardust_kernel_sony_sdm845
       ANYKERNEL_REPO: https://github.com/Sorayukii/AnyKernel3
