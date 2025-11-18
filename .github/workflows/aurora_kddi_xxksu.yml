@@ -50,10 +50,7 @@ jobs:
     - name: Download and extract Clang toolchain
       run: |
         cd $KERNEL_DIR
-        wget -O clang.tar.gz "$CLANG_URL"
-        mkdir -p clang
-        tar -xf clang.tar.gz -C clang
-        rm -f clang.tar.gz
+        git clone https://gitlab.com/inferno0230/clang-r487747c.git --depth=1 clang
         echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV
         
     - name: Set up XXKSU
