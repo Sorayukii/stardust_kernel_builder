@@ -52,7 +52,7 @@ jobs:
         cd $KERNEL_DIR
         git clone --depth=1 "$CLANG_URL" clang
         echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV
-        
+
     - name: Set up RKSU
       run: |
         cd $KERNEL_DIR
@@ -70,11 +70,7 @@ jobs:
     - name: Build kernel
       run: |
         escape_markdown_v2() { 
-            echo "$1" | sed -e 's/\- name: Download and extract Clang toolchain
-      run: |
-        cd $KERNEL_DIR
-        git clone --depth=1 "$CLANG_URL" clang
-        echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV\/\\\\/g' -e 's/_/\\_/g' -e 's/\*/\\*/g' -e 's/\[/\\[/g' -e 's/\]/\\]/g' -e 's/(/\\(/g' -e 's/)/\\)/g' -e 's/~/\\~/g' -e 's/`/\\`/g' -e 's/>/\\>/g' -e 's/#/\\#/g' -e 's/+/\\+/g' -e 's/-/\\-/g' -e 's/=/\\=/g' -e 's/|/\\|/g' -e 's/{/\\{/g' -e 's/}/\\}/g';
+            echo "$1" | sed -e 's/\\/\\\\/g' -e 's/_/\\_/g' -e 's/\*/\\*/g' -e 's/\[/\\[/g' -e 's/\]/\\]/g' -e 's/(/\\(/g' -e 's/)/\\)/g' -e 's/~/\\~/g' -e 's/`/\\`/g' -e 's/>/\\>/g' -e 's/#/\\#/g' -e 's/+/\\+/g' -e 's/-/\\-/g' -e 's/=/\\=/g' -e 's/|/\\|/g' -e 's/{/\\{/g' -e 's/}/\\}/g';
         }
 
         send_telegram_message() {
