@@ -52,7 +52,7 @@ jobs:
         cd $KERNEL_DIR
         wget -O clang.tar.xz "$CLANG_URL"
         mkdir -p clang
-        tar -xf clang.tar.xz --strip-components=1 -C clang
+        tar -C clang/ -xvf clang.tar.xz --strip-components 1
         rm -f clang.tar.xz
         echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV
 
