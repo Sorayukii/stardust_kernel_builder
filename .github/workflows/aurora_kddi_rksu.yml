@@ -50,10 +50,10 @@ jobs:
     - name: Download and extract Clang toolchain
       run: |
         cd $KERNEL_DIR
-        wget -O clang.tar.xz "$CLANG_URL"
+        wget -O clang.tar.gz "$CLANG_URL"
         mkdir -p clang
-        tar -C clang/ -xvf clang.tar.xz --strip-components 1
-        rm -f clang.tar.xz
+        tar -xf clang.tar.gz -C clang
+        rm -f clang.tar.gz
         echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV
 
     - name: Set up RKSU
