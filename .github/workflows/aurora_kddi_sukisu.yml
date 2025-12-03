@@ -53,7 +53,7 @@ jobs:
         git clone --depth=1 "$CLANG_URL" clang
         echo "CLANG_DIR=$KERNEL_DIR/clang" >> $GITHUB_ENV
         
-    - name: Set up XXKSU
+    - name: Set up SukiSU
       run: |
         cd $KERNEL_DIR
         curl -LSs "$KSU_URL" | bash -s $KSU_BRANCH
